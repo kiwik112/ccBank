@@ -1,6 +1,6 @@
 m = peripheral.wrap("monitor_0")
 m.setTextScale(0.5)
-m.setBackgroundColor(colors.red)
+m.setBackgroundColor(colors.blue)
 m.clear()
 m.setCursorPos(1,1)
 m.print("1\n")
