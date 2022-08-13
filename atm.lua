@@ -1,7 +1,7 @@
 m = peripheral.wrap("monitor_0")
 m.setTextScale(0.5)
 m.setBackgroundColor(colors.red)
-m.clear
+m.clear()
 m.setCursorPos(1,1)
 m.write("1")
 m.write("2")
@@ -14,4 +14,4 @@ m.write("8")
 m.write("9")
 m.write("10")
 m.write("11")
-m.write("12")f
+m.write("12")
