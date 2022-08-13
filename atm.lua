@@ -4,15 +4,15 @@ function writeln(text)
     m.setCursorPos(x,y + 1)
 end
 
+function homeScr()
+    m.setTextScale(1.5)
+    m.setBackgroundColor(colors.blue)
+    m.clear()
+    m.setCursorPos(2,2)
+    m.write("ATM")
+end
+
 m = peripheral.wrap("monitor_0")
-
-homeScr:
-
-m.setTextScale(1.5)
-m.setBackgroundColor(colors.blue)
-m.clear()
-m.setCursorPos(2,2)
-m.write("ATM")
 
 event, side, xPos, yPos = os.pullEvent("monitor_touch")
 m.clear()
@@ -25,7 +25,7 @@ while true do
         break
     end
     if i > 200 do
-        goto homeScr
+        homeScr()
     end
 end
 m.clear();
