@@ -17,8 +17,6 @@ writeln("11")
 writeln("12")
 
 function writeln(text)
-{
     x,y = m.getCursorPos()
     m.write(text)
     m.setCursorPos(x,y + 1)
-}
