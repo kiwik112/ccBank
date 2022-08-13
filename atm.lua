@@ -22,3 +22,4 @@ function writeln(text)
     m.write(text)
     m.setCursorPos(x,y + 1)
 }
+--dis code succs.
