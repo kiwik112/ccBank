@@ -27,7 +27,7 @@ function main()
             break
         end
         if i > 20 then
-            return false
+            return true
         end
     end
     m.clear()
@@ -39,6 +39,7 @@ function main()
     m.setBackgroundColor(colors.green)
     m.write("Deposit")
     event, side, xPos, yPos = os.pullEvent("monitor_touch")
+    return false
 end
 
 function getCard()
