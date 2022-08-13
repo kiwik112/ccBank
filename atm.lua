@@ -34,7 +34,7 @@ while true do
     homeScr()
     event, side, xPos, yPos = os.pullEvent("monitor_touch")
     result = getCard()
-    if !result then
+    if not result then
         goto continue
     end
     ::continue::
