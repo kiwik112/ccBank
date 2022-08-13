@@ -21,10 +21,10 @@ m.write("Please insert your card.")
 i = 0
 while true do
     i = i + 1
-    if disk.isPresent("left") do
+    if disk.isPresent("left") then
         break
     end
-    if i > 200 do
+    if i > 200 then
         homeScr()
     end
 end
