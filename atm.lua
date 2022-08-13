@@ -12,22 +12,34 @@ function homeScr()
     m.write("ATM")
 end
 
-m = peripheral.wrap("monitor_0")
-
-event, side, xPos, yPos = os.pullEvent("monitor_touch")
-m.clear()
-m.setTextScale(0.5)
-m.write("Please insert your card.")
-i = 0
-while true do
-    i = i + 1
-    if disk.isPresent("left") then
-        break
-    end
-    if i > 200 then
-        homeScr()
+function getCard()
+    m.clear()
+    m.setTextScale(0.5)
+    writeln("Please insert")
+    writeln("your card.")
+    while true do
+        i = i + 1
+        sleep(1)
+        if disk.isPresent("left") then
+            return true
+        end
+        if i > 20 then
+            return false
+        end
     end
 end
+
+m = peripheral.wrap("monitor_0")
+while true do
+    homeScr()
+    event, side, xPos, yPos = os.pullEvent("monitor_touch")
+    result = getCard()
+    if !result then
+        goto continue
+    end
+    ::continue::
+end
+
 m.clear();
 
 --dis code succs.
