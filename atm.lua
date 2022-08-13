@@ -16,7 +16,7 @@ writeln("10")
 writeln("11")
 writeln("12")
 
-writeln(text)
+function writeln(text)
 {
     x,y = m.getCursorPos()
     m.write(text)
