@@ -20,4 +20,5 @@ function writeln(text)
     x,y = m.getCursorPos()
     m.write(text)
     m.setCursorPos(x,y + 1)
+end
 --dis code succs.
