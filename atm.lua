@@ -10,10 +10,7 @@ m.setBackgroundColor(colors.blue)
 m.clear()
 m.setCursorPos(2,2)
 m.write("ATM")
-
-while true do
-    event, side, xPos, yPos = os.pullEvent("monitor_touch")
-end
+event, side, xPos, yPos = os.pullEvent("monitor_touch")
 m.clear()
 
 --dis code succs.
