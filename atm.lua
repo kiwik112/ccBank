@@ -23,12 +23,21 @@ function main()
         i = i + 1
         sleep(1)
         if disk.isPresent("left") then
-            return true
+            break
         end
         if i > 20 then
             return false
         end
     end
+    m.clear()
+    m.setCursorPos(1,1)
+    m.write("Select action.")
+    m.setCursorPos(1,3)
+    m.setBackgroundColor(colors.red)
+    m.write(Withdraw)
+    m.setBackgroundColor(colors.green)
+    m.write(Deposit)
+    event, side, xPos, yPos = os.pullEvent("monitor_touch")
 end
 
 function getCard()
@@ -49,6 +58,7 @@ function getCard()
 end
 
 m = peripheral.wrap("monitor_0")
+i = 0
 while main() do
 
 end
